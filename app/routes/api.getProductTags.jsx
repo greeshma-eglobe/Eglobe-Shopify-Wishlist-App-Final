@@ -6,7 +6,6 @@ export async function loader({ request }) {
    const shop = url.searchParams.get("shop");
 
     try {
-      // Fetch wishlist items
       const productTags = await db.productTags.findMany({
         where: { shop },
       });
